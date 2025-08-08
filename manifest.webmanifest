@@ -1,0 +1,9 @@
+{
+  "name": "PaperCut Animator",
+  "short_name": "PaperCut",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#11162a",
+  "icons": []
+}

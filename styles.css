@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b0e14;color:#e6e6e6}
+header{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:#11162a;position:sticky;top:0}
+h1{font-size:18px;margin:0}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+button,input[type="range"],input[type="number"]{background:#1b2038;color:#e6e6e6;border:1px solid #2a2f4a;border-radius:6px;padding:6px 10px}
+button:disabled{opacity:.5}
+main{display:grid;grid-template-columns:1fr 320px;gap:12px;padding:12px}
+#stage-wrap{background:#0f1326;border:1px solid #22284b;border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;min-height:400px}
+#stage{max-width:100%;height:auto;border:1px dashed #2f3668;background:#0b0e14}
+#timeline{background:#0f1326;border:1px solid #22284b;border-radius:8px;padding:8px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.frame-list{display:flex;gap:8px;flex-wrap:wrap}
+.frame{border:2px solid #2a2f4a;border-radius:6px;overflow:hidden;position:relative}
+.frame img{display:block;width:120px;height:68px;object-fit:contain;background:#000}
+.frame .tools{position:absolute;bottom:4px;right:4px;display:flex;gap:4px}
+.frame .tools button{padding:2px 6px;font-size:12px}
+footer{padding:10px 12px;border-top:1px solid #22284b;background:#0f1326}

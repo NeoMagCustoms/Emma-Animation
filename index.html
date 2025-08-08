@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaperCut Animator</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🧻 PaperCut Animator</h1>
+    <nav>
+      <button id="btn-import">Import Frames</button>
+      <input type="file" id="file-input" accept="image/*" multiple hidden>
+      <button id="btn-snap">📸 Snap (camera)</button>
+      <button id="btn-play">▶ Play</button>
+      <button id="btn-stop" disabled>⏹ Stop</button>
+      <label>FPS <input type="range" id="fps" min="1" max="24" value="12"></label>
+      <label>Onion <input type="number" id="onion" min="0" max="4" value="2"></label>
+      <label>Opacity <input type="range" id="onionAlpha" min="0" max="1" step="0.05" value="0.3"></label>
+      <button id="btn-export-gif">Export GIF</button>
+      <button id="btn-export-webm">Export WebM</button>
+      <button id="btn-clear">New</button>
+      <button id="btn-save">Save</button>
+      <button id="btn-load">Load</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="stage-wrap">
+      <canvas id="stage" width="960" height="540"></canvas>
+      <video id="camera" autoplay playsinline hidden></video>
+    </section>
+    <section id="timeline"></section>
+  </main>
+
+  <footer>
+    <p>All processing stays in your browser. Host anywhere (GitHub Pages ready). Offline-capable.</p>
+  </footer>
+
+  <script src="vendor/gifenc.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+    }
+  </script>
+</body>
+</html>
